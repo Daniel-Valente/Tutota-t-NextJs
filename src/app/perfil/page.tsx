@@ -1,4 +1,4 @@
-import { Bookmark, Dashboard, GroupAdd, Markunread, People } from "@mui/icons-material";
+import { AddCircle, Bookmark, Dashboard, GroupAdd, Markunread, People, School } from "@mui/icons-material";
 import Image from "next/image";
 import React from "react";
 import { Card } from "../ui/home/cards";
@@ -58,7 +58,15 @@ export default function Page() {
 
             <div className="flex flex-row">
                 <div className="lg:w-3/12 lg:block hidden">
-
+                    <div className="card bg-base-100 shadow-xl mt-5 ml-5">
+                        <div className="card-body">
+                            <h2 className="card-title">Detalle</h2>
+                            <p className='text-sm'>
+                                <School sx={{ fontSize: 20 }} className='mr-1'/>
+                                Carrera <span className='font-bold'>Ingenieria Informática.</span>
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 <div className="lg:w-6/12 w-full">
                     <div className="flex flex-col items-center justify-center">
@@ -66,17 +74,17 @@ export default function Page() {
 
                         <ul className='menu menu-horizontal bg-base-100 mt-5 w-11/12 rounded-none'>
                             <li>
-                                <a className='btn btn-sm ml-2 rounded-3xl'><Dashboard sx={{ fontSize: 20 }}/>
+                                <a className='btn btn-sm ml-2 rounded-3xl'><Dashboard sx={{ fontSize: 20 }} />
                                     <p className="hidden lg:block">Publicaciones</p>
                                 </a>
                             </li>
                             <li>
-                                <a className='btn btn-sm ml-2 rounded-3xl'><People sx={{ fontSize: 20 }}/>
+                                <a className='btn btn-sm ml-2 rounded-3xl'><People sx={{ fontSize: 20 }} />
                                     <p className="hidden lg:block">Seguidores</p>
                                 </a>
                             </li>
                             <li>
-                                <a className='btn btn-sm ml-2 rounded-3xl'><Bookmark sx={{ fontSize: 20 }}/>
+                                <a className='btn btn-sm ml-2 rounded-3xl'><Bookmark sx={{ fontSize: 20 }} />
                                     <p className="hidden lg:block">Mi Colección</p>
                                 </a>
                             </li>
@@ -90,7 +98,23 @@ export default function Page() {
                     </div>
                 </div>
                 <div className="lg:w-3/12 lg:block hidden">
-                    
+                    <div className="card bg-base-100 shadow-xl mt-5 mr-5">
+                        <div className="card-body">
+                            <div className="flex">
+                                <h2 className="card-title">Mis Tutorías</h2>
+                                <button className="btn btn-sm btn-ghost btn-circle ml-3">
+                                    <AddCircle sx={{ fontSize: 20 }}/>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="card bg-base-100 shadow-xl mt-5 mr-5">
+                        <div className="card-body">
+                            <div className="flex">
+                                <h2 className="card-title">Tutorías Inscritas</h2>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
