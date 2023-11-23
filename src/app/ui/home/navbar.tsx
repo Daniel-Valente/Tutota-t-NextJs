@@ -1,5 +1,6 @@
 import { ChatBubble, Notifications, Person, Search } from '@mui/icons-material';
-import { Theme } from '../theme';
+import { Theme } from './navbar/theme';
+import Image from 'next/image';
 
 const Navbar = () => {
     return (
@@ -39,22 +40,36 @@ const Navbar = () => {
                 </div>
             </div>
             <div className="hidden lg:flex flex-none gap-2">
-                <Theme/>
+                <Theme />
                 <div className="form-control">
                     <input type="text" placeholder="Search" className="input input-bordered w-24 md:w-auto" />
                 </div>
-                <button className="btn btn-ghost btn-circle">
-                    <div className="indicator">
-                        <ChatBubble sx={{ fontSize: 20 }} />
-                        <span className="badge badge-xs badge-primary indicator-item"></span>
-                    </div>
-                </button>
-                <button className="btn btn-ghost btn-circle">
-                    <div className="indicator">
-                        <Notifications sx={{ fontSize: 20 }} />
-                        <span className="badge badge-xs badge-primary indicator-item"></span>
-                    </div>
-                </button>
+                <div className='dropdown dropdown-end'>
+                    <label tabIndex={0} className='btn btn-ghost btn-circle'>
+                        <div className="rounded-full indicator">
+                            <ChatBubble sx={{ fontSize: 20 }} />
+                            <span className="badge badge-xs badge-primary indicator-item"></span>
+                        </div>
+                    </label>
+                    <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-200 rounded-box w-52">
+                        <li><a>wsd</a></li>
+                        <li><a>wsd</a></li>
+                        <li><a>Logout</a></li>
+                    </ul>
+                </div>
+                <div className='dropdown dropdown-end'>
+                    <label tabIndex={0} className='btn btn-ghost btn-circle'>
+                        <div className="rounded-full indicator">
+                            <Notifications sx={{ fontSize: 20 }} />
+                            <span className="badge badge-xs badge-primary indicator-item"></span>
+                        </div>
+                    </label>
+                    <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-200 rounded-box w-52">
+                        <li><a>wsd</a></li>
+                        <li><a>wsd</a></li>
+                        <li><a>Logout</a></li>
+                    </ul>
+                </div>
                 <div className="dropdown dropdown-end">
                     <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                         <div className="w-10 rounded-full">

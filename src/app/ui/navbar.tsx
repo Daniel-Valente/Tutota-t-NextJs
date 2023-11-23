@@ -1,8 +1,6 @@
-'use client';
-
-import { LoginButton } from './login-button';
-import { RegisterButton } from './register-button';
-import { Theme } from './theme';
+import { LoginButton } from './navbar/login-button';
+import { RegisterButton } from './navbar/register-button';
+import { Theme } from './home/navbar/theme';
 
 const Navbar = () => {
     return (

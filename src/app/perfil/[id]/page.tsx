@@ -2,8 +2,9 @@ import Image from "next/image";
 import React from "react";
 import { AddCircle, Bookmark, CameraAlt, Dashboard, GroupAdd, ManageSearch, Markunread, People, School } from "@mui/icons-material";
 
-import { Card } from "../ui/home/cards";
-import { CreatePost } from "../ui/home/create-post";
+import { Post } from "../../ui/home/posts";
+import { CreatePost } from "../../ui/home/create-post";
+import { Course } from "../../ui/perfil/courses";
 
 export default function Page() {
     return (
@@ -122,28 +123,38 @@ export default function Page() {
                             </li>
                         </ul>
 
-                        <Card base={100} />
-                        <Card base={100} />
-                        <Card base={100} />
-                        <Card base={100} />
-                        <Card base={100} />
+                        <Post base={100} />
+                        <Post base={100} />
+                        <Post base={100} />
+                        <Post base={100} />
+                        <Post base={100} />
                     </div>
                 </div>
                 <div className="lg:w-3/12 lg:block hidden">
                     <div className="card bg-base-100 shadow-xl mt-5 mr-5">
                         <div className="card-body">
-                            <div className="flex">
-                                <h2 className="card-title">Mis Tutorías</h2>
-                                <button className="btn btn-sm btn-ghost btn-circle ml-3">
-                                    <AddCircle sx={{ fontSize: 20 }}/>
-                                </button>
+                            <div className="flex flex-col">
+                                <div className="flex">
+                                    <h2 className="card-title">Mis Tutorías</h2>
+                                    <button className="btn btn-sm btn-ghost btn-circle ml-3">
+                                        <AddCircle sx={{ fontSize: 20 }}/>
+                                    </button>
+                                </div>
+                                <Course/>
+                                <Course/>
+                                <Course/>
+                                <Course/>
                             </div>
                         </div>
                     </div>
                     <div className="card bg-base-100 shadow-xl mt-5 mr-5">
                         <div className="card-body">
-                            <div className="flex">
+                            <div className="flex flex-col">
                                 <h2 className="card-title">Tutorías Inscritas</h2>
+                                <Course/>
+                                <Course/>
+                                <Course/>
+                                <Course/>
                             </div>
                         </div>
                     </div>
