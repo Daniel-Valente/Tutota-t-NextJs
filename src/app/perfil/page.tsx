@@ -1,6 +1,7 @@
-import { AddCircle, Bookmark, Dashboard, GroupAdd, Markunread, People, School } from "@mui/icons-material";
 import Image from "next/image";
 import React from "react";
+import { AddCircle, Bookmark, CameraAlt, Dashboard, GroupAdd, ManageSearch, Markunread, People, School } from "@mui/icons-material";
+
 import { Card } from "../ui/home/cards";
 import { CreatePost } from "../ui/home/create-post";
 
@@ -17,6 +18,13 @@ export default function Page() {
                         className="w-full lg:h-80 h-40"
                     />
                 </figure>
+
+                <div className='block lg:hidden absolute top-32 right-2'>
+                    <button className='btn btn-circle btn-sm'>
+                        <CameraAlt sx={{ fontSize: 25 }}/>
+                    </button>
+                </div>
+
                 <div className="avatar absolute lg:top-52 top-28">
                     <div className="w-24 lg:w-48 rounded-full lg:ml-48 ml-5 ring ring-offset-base-100 ring-offset-2">
                         <Image
@@ -28,6 +36,13 @@ export default function Page() {
                         />
                     </div>
                 </div>
+
+                <div className='block lg:hidden absolute top-44 left-24'>
+                    <button className='btn btn-circle btn-sm ring'>
+                        <CameraAlt sx={{ fontSize: 20 }}/>
+                    </button>
+                </div>
+
                 <div className='hidden lg:block absolute top-80 right-8 mt-3'>
                     <button className='btn btn-primary'>
                         <Markunread sx={{ fontSize: 25 }} />
@@ -70,6 +85,23 @@ export default function Page() {
                 </div>
                 <div className="lg:w-6/12 w-full">
                     <div className="flex flex-col items-center justify-center">
+                        <div className="card bg-base-100 shadow-xl mt-5 w-11/12 rounded-none block lg:hidden">
+                            <div className="card-body">
+                                <h2 className="card-title">Detalle</h2>
+                                <p className='text-sm'>
+                                    <School sx={{ fontSize: 20 }} className='mr-1'/>
+                                    Carrera <span className='font-bold'>Ingenieria Informática.</span>
+                                </p>
+
+                                <div className=' mt-1 mb-1 border-b-2'></div>
+
+                                <button className='btn btn-sm items-center w-full'>
+                                    <ManageSearch/>
+                                    Gestionar Tutorias
+                                </button>
+                            </div>
+                        </div>
+
                         <CreatePost base={100} />
 
                         <ul className='menu menu-horizontal bg-base-100 mt-5 w-11/12 rounded-none'>
