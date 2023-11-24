@@ -14,7 +14,7 @@ export default function Layout({
                     <SideNav />
                 </div>
                 <div className='w-full lg:w-9/12'>
-                    {children}
+                    { children }
                 </div>
             </div>
         </>
