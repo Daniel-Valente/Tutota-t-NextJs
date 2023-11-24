@@ -1,10 +1,12 @@
 import Image from "next/image";
 import React from "react";
-import { ArrowForwardIos, Dashboard, DateRange, Description, Home, Lock, PhotoLibrary, Public, School, WatchLater } from "@mui/icons-material";
+import { ArrowForwardIos, Dashboard, DateRange, Description, Home, Lock, PhotoLibrary, Public, WatchLater } from "@mui/icons-material";
 
 import { CreatePost } from "@/app/ui/home/create-post";
 import { Post } from "@/app/ui/home/posts";
-import { Course } from "@/app/ui/perfil/courses";
+import { Course } from "@/app/ui/perfil/[id]/courses";
+import { Member } from "@/app/ui/course/[id]/member";
+import { CourseView } from "@/app/ui/course/[id]/course-view";
 
 
 export default function Page() {
@@ -33,52 +35,16 @@ export default function Page() {
                             <span className='font-bold'> 21 mil</span> Miembros
                         </p>
 
-                        <button className='btn mr-5 btn-sm hidden lg:block'>
-                            <p className='text-sm'>Unirse al grupo</p>
+                        <button className='btn mr-5 btn-sm btn-secondary hidden lg:block'>
+                            <p className='text-sm'>Unirse a la tutoría</p>
                         </button>
                     </div>
 
                     <div className='flex justify-between lg:hidden'>
-                        <div className="avatar-group -space-x-6 rtl:space-x-reverse mt-2">
-                            <div className="avatar">
-                                <div className="w-12">
-                                    <Image
-                                        src='/images/Imagen1.png'
-                                        alt='avatar'
-                                        width={500}
-                                        height={500}
-                                    />
-                                </div>
-                            </div>
-                            <div className="avatar">
-                                <div className="w-12">
-                                    <Image
-                                        src='/images/Imagen1.png'
-                                        alt='avatar'
-                                        width={500}
-                                        height={500}
-                                    />
-                                </div>
-                            </div>
-                            <div className="avatar">
-                                <div className="w-12">
-                                    <Image
-                                        src='/images/Imagen1.png'
-                                        alt='avatar'
-                                        width={500}
-                                        height={500}
-                                    />
-                                </div>
-                            </div>
-                            <div className="avatar placeholder">
-                                <div className="w-12 bg-neutral text-neutral-content">
-                                    <span>+99</span>
-                                </div>
-                            </div>
-                        </div>
+                        <Member/>
 
-                        <button className='btn mr-5 btn-sm align-middle'>
-                            <p className='text-xs'>Unirse al grupo</p>
+                        <button className='btn mr-5 btn-sm btn-secondary align-middle'>
+                            <p className='text-xs'>Unirse a la tutoría</p>
                         </button>
                     </div>
 
@@ -121,43 +87,7 @@ export default function Page() {
                                 <span> Link de meet.</span>
                             </p>
 
-                            <div className="avatar-group -space-x-6 rtl:space-x-reverse mt-2">
-                                <div className="avatar">
-                                    <div className="w-12">
-                                        <Image
-                                            src='/images/Imagen1.png'
-                                            alt='avatar'
-                                            width={500}
-                                            height={500}
-                                        />
-                                    </div>
-                                </div>
-                                <div className="avatar">
-                                    <div className="w-12">
-                                        <Image
-                                            src='/images/Imagen1.png'
-                                            alt='avatar'
-                                            width={500}
-                                            height={500}
-                                        />
-                                    </div>
-                                </div>
-                                <div className="avatar">
-                                    <div className="w-12">
-                                        <Image
-                                            src='/images/Imagen1.png'
-                                            alt='avatar'
-                                            width={500}
-                                            height={500}
-                                        />
-                                    </div>
-                                </div>
-                                <div className="avatar placeholder">
-                                    <div className="w-12 bg-neutral text-neutral-content">
-                                        <span>+99</span>
-                                    </div>
-                                </div>
-                            </div>
+                            <Member/>
                         </div>
                     </div>
                 </div>
@@ -165,18 +95,7 @@ export default function Page() {
                     <div className="flex flex-col items-center justify-center">
                         <CreatePost base={100} />
 
-                        <ul className='menu menu-horizontal bg-base-100 mt-5 w-11/12 rounded-none'>
-                            <li>
-                                <a className='btn btn-sm ml-2 rounded-3xl'><Dashboard sx={{ fontSize: 20 }} />
-                                    <p className="hidden lg:block">Publicaciones</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a className='btn btn-sm ml-2 rounded-3xl'><PhotoLibrary sx={{ fontSize: 20 }} />
-                                    <p className="hidden lg:block">Fotos</p>
-                                </a>
-                            </li>
-                        </ul>
+                        <CourseView />
 
                         <Post base={100} />
                         <Post base={100} />
