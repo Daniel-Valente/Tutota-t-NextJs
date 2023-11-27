@@ -5,25 +5,25 @@ export const CourseFilter = () => {
     return (
         <div className='mt-3 ml-3 flex flex-col'>
             <ul className="steps steps-vertical">
-                <li data-content="📚" className="step step-secondary">
+                <li data-content="" className="step step-secondary">
                     <button className="btn btn-ghost hover:btn-primary">
                         <Dashboard sx={{ fontSize: 25 }} />
                         Todos
                     </button>
                 </li>
-                <li data-content="🎓" className="step step-secondary">
+                <li data-content="" className="step step-secondary">
                     <button className="btn btn-ghost hover:btn-primary">
                         <Science sx={{ fontSize: 25 }} />
                         Básicas
                     </button>
                 </li>
-                <li data-content="🎓" className="step step-secondary">
+                <li data-content="" className="step step-secondary">
                     <button className="btn btn-ghost hover:btn-primary">
                         <Engineering sx={{ fontSize: 25 }} />
                         Ingenierias
                     </button>
                 </li>
-                <li data-content="🎓" className="step step-secondary">
+                <li data-content="" className="step step-secondary">
                     <button className="btn btn-ghost hover:btn-primary">
                         <Devices sx={{ fontSize: 25 }} />
                         Divtic
