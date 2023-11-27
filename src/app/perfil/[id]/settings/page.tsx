@@ -4,11 +4,10 @@ import React from 'react';
 export default function Page() {
     return (
         <>
-            <div className='block lg:hidden'>
+            <div className='block lg:hidden bg-base-300'>
                 <SideNav />
             </div>
             <div className='hidden lg:block'>
-                
             </div>
         </>
     );
