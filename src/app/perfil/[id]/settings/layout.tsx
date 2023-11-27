@@ -1,5 +1,4 @@
-import Navbar from "@/app/ui/home/navbar";
-import { SideNav } from "../ui/message/sidenav";
+import { SideNav } from "@/app/ui/perfil/[id]/settings/sidenav";
 
 export default function Layout({
     children,
@@ -8,9 +7,8 @@ export default function Layout({
 }) {
     return (
         <>
-            <Navbar />
             <div className="flex flex-row">
-                <div className='lg:w-3/12 hidden lg:block'>
+                <div className='lg:w-3/12 hidden lg:block bg-base-300 border-t-2 border-base-200'>
                     <SideNav />
                 </div>
                 <div className='w-full lg:w-9/12'>

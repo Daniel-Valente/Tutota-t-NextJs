@@ -4,22 +4,32 @@ import { Dashboard, Devices, Engineering, Science } from '@mui/icons-material';
 export const CourseFilter = () => {
     return (
         <div className='mt-3 ml-3 flex flex-col'>
-            <button className='btn btn-secondary mt-3'>
-                <Dashboard sx={{ fontSize: 25 }} />
-                Todos
-            </button>
-            <button className='btn btn-secondary mt-3'>
-                <Science sx={{ fontSize: 25 }} />
-                Básicas
-            </button>
-            <button className='btn btn-secondary mt-3'>
-                <Engineering sx={{ fontSize: 25 }} />
-                Ingenierias
-            </button>
-            <button className='btn btn-secondary mt-3'>
-                <Devices sx={{ fontSize: 25 }} />
-                Divtic
-            </button>
+            <ul className="steps steps-vertical">
+                <li data-content="📚" className="step step-secondary">
+                    <button className="btn btn-ghost hover:btn-primary">
+                        <Dashboard sx={{ fontSize: 25 }} />
+                        Todos
+                    </button>
+                </li>
+                <li data-content="🎓" className="step step-secondary">
+                    <button className="btn btn-ghost hover:btn-primary">
+                        <Science sx={{ fontSize: 25 }} />
+                        Básicas
+                    </button>
+                </li>
+                <li data-content="🎓" className="step step-secondary">
+                    <button className="btn btn-ghost hover:btn-primary">
+                        <Engineering sx={{ fontSize: 25 }} />
+                        Ingenierias
+                    </button>
+                </li>
+                <li data-content="🎓" className="step step-secondary">
+                    <button className="btn btn-ghost hover:btn-primary">
+                        <Devices sx={{ fontSize: 25 }} />
+                        Divtic
+                    </button>
+                </li>
+            </ul>
         </div>
     );
 };
