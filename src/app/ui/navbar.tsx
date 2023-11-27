@@ -16,12 +16,10 @@ const Navbar = () => {
                     <div className="flex-1 px-2 mx-2">
                         <a className="btn btn-ghost text-xl">Tutorate</a>
                     </div>
-                    <div className="flex-none hidden lg:block">
-                        <ul className="menu menu-horizontal">
-                            <li><Theme /></li>
-                            <li><RegisterButton /></li>
-                            <li><LoginButton /></li>
-                        </ul>
+                    <div className="hidden lg:flex flex-none gap-2">
+                        <Theme />
+                        <RegisterButton />
+                        <LoginButton />
                     </div>
                 </div>
             </div>
