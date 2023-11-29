@@ -9,17 +9,6 @@ export const Messages = () => {
             <div className="card-body">
                 <LeftMessage />
                 <RightMessage />
-                <RightMessage />
-                <RightMessage />
-                <RightMessage />
-                <RightMessage />
-                <RightMessage />
-                <RightMessage />
-                <RightMessage />
-                <RightMessage />
-                <RightMessage />
-                <RightMessage />
-                <RightMessage />
             </div>
         </div>
     );

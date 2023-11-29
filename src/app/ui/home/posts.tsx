@@ -2,9 +2,9 @@ import React from 'react';
 import Image from 'next/image';
 
 import { LikeButton } from './post/like-button';
-import { SendButton } from './post/send-button';
 import { CommentButton } from './post/comment-button';
 import { MoreButton } from './more-button';
+import { NewComment } from './post/[id]/new-comment';
 
 export const Post = ({ base }: { base: number }) => {
     return (
@@ -43,22 +43,10 @@ export const Post = ({ base }: { base: number }) => {
                 </div>
                 <h2 className='font-bold'>Test</h2>
                 <p><span className='text-secondary'>My Company, Inc</span> If a dog chews shoes whose shoes does he choose?</p>
-                <div className='border-b-2 mt-4 mb-1 border-base-300'></div>
 
-                <div className='flex mt-2 justify-between'>
-                    <div className="avatar">
-                        <div className="w-10 h-10 rounded-full ring">
-                            <Image
-                                src='/images/cucei-mobile.png'
-                                alt='avatar'
-                                width={500}
-                                height={500}
-                            />
-                        </div>
-                    </div>
-
-                    <input type="text" placeholder="Type here" className="input input-bordered ml-5 h-10 w-full mr-5" />
-                    <SendButton />
+                <div className='hidden lg:block'>
+                    <div className='border-b-2 mt-4 mb-1 border-base-300'></div>
+                    <NewComment />
                 </div>
             </div>
         </div>

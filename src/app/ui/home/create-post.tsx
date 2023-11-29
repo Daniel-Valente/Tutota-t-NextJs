@@ -19,7 +19,7 @@ export const CreatePost = ({ base }: { base: number }) => {
                         </div>
                     </div>
 
-                    <input type="text" placeholder="Type here" className="input input-bordered ml-5 h-10 w-full"/>
+                    <input type="text" placeholder="Type here" className="input input-bordered ml-5 h-10 w-full" onClick={()=>document.getElementById('createPostModal').showModal()}/>
                 </div>
             </div>
         </div>

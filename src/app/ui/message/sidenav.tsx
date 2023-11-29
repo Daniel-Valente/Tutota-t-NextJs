@@ -10,27 +10,6 @@ export const SideNav = () => {
                 </div>
                 <div className="ml-3 mt-3 mb-3 overflow-y-auto">
                     <ChatCard />
-                    <ChatCard />
-                    <ChatCard />
-                    <ChatCard />
-                    <ChatCard />
-                    <ChatCard />
-                    <ChatCard />
-                    <ChatCard />
-                    <ChatCard />
-                    <ChatCard />
-                    <ChatCard />
-                    <ChatCard />
-                    <ChatCard />
-                    <ChatCard />
-                    <ChatCard />
-                    <ChatCard />
-                    <ChatCard />
-                    <ChatCard />
-                    <ChatCard />
-                    <ChatCard />
-                    <ChatCard />
-                    <ChatCard />
                 </div>
             </div>
         </>

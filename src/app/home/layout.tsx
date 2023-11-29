@@ -1,4 +1,7 @@
-import Navbar from "@/app/ui/home/navbar"
+import Navbar from "@/app/ui/home/navbar";
+
+import { CreatePostModal } from "../ui/home/create-post-modal";
+import { PostModal } from "../ui/home/post/[id]/post-modal";
 
 export default function Layout({
     children,
@@ -9,6 +12,9 @@ export default function Layout({
         <>
             <Navbar/>
             <div>{ children }</div>
+
+            <CreatePostModal />
+            <PostModal />
         </>
     )
 }

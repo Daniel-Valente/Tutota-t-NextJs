@@ -18,7 +18,7 @@ export default function Page() {
 
             <Messages />
 
-            <div className="card card-compact w-full bg-base-300 rounded-none">
+            <div className="card card-compact w-full bg-base-300 rounded-none mt-auto">
                 <div className="card-body">
                     <div className='flex'>
                         <SendMessage />
